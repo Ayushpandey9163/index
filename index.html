@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .header img {
+            max-width: 50px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .title-tab {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .title-bar {
+            width: 300px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-bar:hover {
+            background-color: #2980b9;
+        }
+
+        .title-bar.active {
+            background-color: #1abc9c;
+        }
+
+        .dropdown-content p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Images and Title Tab -->
+    <div class="header">
+        
+        <div class="title-tab" align="center">REVOLUTIONIZING HEALTHCARE WITH ARTIFICIAL INTELLIGENCE</div>
+       
+    </div>
+
+    <!-- Title Bars -->
+</div>
+<div class="title-bar" onclick="toggleDropdown('title1')">Diagnostics and Early Detection</div>
+    <div class="dropdown-content" id="title1">
+        <p> - AI plays a huge role in analyzing medical images for early detection of diseases</p>
+       <p> - It can be used to increse accuracy and speed in diagnostics.</p>
+     </div>
+<div class="title-bar" onclick="toggleDropdown('title2')">Personalised Medicine</div>
+    <div class="dropdown-content" id="title2">
+        <p> -  AI tailors treatment plans based on individual patient data.</p>
+        <p> - It helps in enhancing precision and effectiveness in healthcare interventions.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title3')">Predictive Analytics</div>
+    <div class="dropdown-content" id="title3">
+        <p>- AI analyzes vast datasets to predict disease outbreaks.</p>
+       <p>- It follows trends and aids in proactive healthcare planning and resource allocation.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title4')">Virtual Health Analytics</div>
+    <div class="dropdown-content" id="title4">
+        <p> - AI-driven virtual assistants for patient engagement and support can be used.</p>
+        <p> - AI improves accessibility and communication in healthcare.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title5')">Drug Discovery And Development</div>
+    <div class="dropdown-content" id="title5">
+        <p>- AI accelerates drug discovery through data analysis.</p>
+   <p>- AI reduces time and costs associated with bringing new medications to market.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title6')">Remote Patient Monitoring</div>
+    <div class="dropdown-content" id="title6">
+        <p> - AI plays a huge role in continuous monitoring of patients outside traditional healthcare settings.</p>
+        <p> - It enhances real-time health tracking and preventive care.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title7')">Ethical Considerations</div>
+    <div class="dropdown-content" id="title7">
+        <p> - Addressing ethical implications and ensuring responsible AI use in healthcare.</p>
+        <p>- Emphasizing the importance of data privacy and patient consent.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title8')">Success Stories</div>
+    <div class="dropdown-content" id="title8">
+        <p> - Showcasing real-world examples of healthcare institutions benefiting from AI adoption.</p>
+        <p>- Sharing positive outcomes and improvements in patient care.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title9')">Future Possibilities</div>
+    <div class="dropdown-content" id="title9">
+        <p> - Discussing potential advancements and the evolving landscape of AI in healthcare.</p>
+        <p>- Encouraging ongoing research and collaboration for continuous improvement.</p>
+    </div>
+<div class="title-bar" onclick="toggleDropdown('title10')">Conclusions</div>
+    <div class="dropdown-content" id="title10">
+        <p> - Summarizing the transformative impact of AI on healthcare.</p>
+        <p>- Encouraging a collective effort to harness technology for the betterment of global health.</p>
+    </div>
+
+    
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+
+            // Toggle active class for styling
+            var titleBar = document.querySelector(`.title-bar#${id}`);
+            titleBar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
